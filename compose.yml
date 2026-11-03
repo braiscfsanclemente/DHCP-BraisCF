@@ -5,72 +5,111 @@ services:
     hostname: router
     networks:
       rede_wan:
-        ipv4_address: 192.168.200.254  
-        interface_name: eth0  
-      dhcp_lab:
-        ipv4_address: 192.168.130.254
+        ipv4_address: 192.168.200.254
+        interface_name: eth0
+      rede_stark:
+        ipv4_address: 192.168.10.254
         interface_name: eth1
-      rede2:
-        ipv4_address: 192.168.140.254
+      rede_lannister:
+        ipv4_address: 192.168.11.254
         interface_name: eth2
-  dnsserver:
+      rede_targaryen:
+        ipv4_address: 192.168.12.254
+        interface_name: eth3
+    cap_add:
+      - NET_ADMIN
+  arya:
     build: docker/dnsserver
-    hostname: dnsserver
-    networks: 
-      dhcp_lab:
-        ipv4_address: 192.168.130.9  
-    volumes:
-      - ./dnsserver/named.conf.local:/etc/bind/named.conf.local
-      - ./dnsserver/zonas:/var/cache/bind/zonas          
-  kea:
-    build: ./docker/kea
-    container_name: kea
+    hostname: arya
     networks:
-      dhcp_lab:
-        ipv4_address: 192.168.130.2
+      rede_stark:
+        ipv4_address: 192.168.10.9
     volumes:
-      - ./dhcp/kea-dhcp4.conf.json:/etc/kea/kea-dhcp4.conf
-  
+      - ./arya/named.conf.local:/etc/bind/named.conf.local
+      - ./arya/zonas:/var/cache/bind/zonas
+  ned:
+    build: ./docker/kea
+    container_name: ned
+    networks:
+      rede_stark:
+        ipv4_address: 192.168.10.2
+    volumes:
+      - ./ned/kea-dhcp4.conf.json:/etc/kea/kea-dhcp4.conf
 
-  
   cliente1:
     build: ./docker/cliente
     container_name: client1
     networks:
-      dhcp_lab:
-        ipv4_address: 192.168.130.221
-        mac_address: 02:42:ac:11:00:10  # dirección HW fija
+      rede_stark:
+        ipv4_address: 192.168.10.221
+        mac_address: 02:42:ac:11:00:10 # dirección HW fija
 
     command: >
-      sh -c "dhclient -r && dhclient -v eth0 && sleep infinity"
+      sh -c "ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"
+    cap_add:
+      - NET_ADMIN
     depends_on:
-      - kea
+      - ned
   cliente2:
     build: ./docker/cliente
-
+    container_name: client2
     networks:
-      dhcp_lab:
-        ipv4_address: 192.168.130.222
+      rede_stark:
+        ipv4_address: 192.168.10.222
 
     command: >
-      sh -c "dhclient -r && dhclient -v eth0 && sleep infinity"
+      sh -c "ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"
+    cap_add:
+      - NET_ADMIN
     depends_on:
-      - kea
+      - ned
+  cliente3:
+    build: ./docker/cliente
+    container_name: client3
+    networks:
+      rede_stark:
+        ipv4_address: 192.168.10.223
+
+    command: >
+      sh -c "ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - ned
+  cliente4:
+    build: ./docker/cliente
+    container_name: client4
+    networks:
+      rede_stark:
+        ipv4_address: 192.168.10.224
+
+    command: >
+      sh -c "ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - ned
 
 networks:
-  dhcp_lab:
+
+  rede_stark:
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.130.0/24
-  rede2:
+        - subnet: 192.168.10.0/24
+  rede_lannister:
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.140.0/24
+        - subnet: 192.168.11.0/24
+  rede_targaryen:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.12.0/24
 
   rede_wan:
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.200.0/24             
+        - subnet: 192.168.200.0/24

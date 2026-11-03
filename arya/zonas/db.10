@@ -1,11 +1,12 @@
 $TTL    86400
-@       IN      SOA     ns1.test.lan. admin.test.lan. (
-                        4  ; Número de serie
+@       IN      SOA     arya.stark.lan. root.stark.lan. (
+                        4           ; Número de serie
                         3600        ; Actualización (Refresh)
                         1800        ; Reintento (Retry)
                         1209600     ; Caducidade (Expire)
                         86400 )     ; TTL mínimo
-
+        
 ; Servidores de nomes
-@       IN      NS      ns1.test.lan.
-9       IN      PTR     ns1.test.lan.
+@       IN      NS      arya.stark.lan.
+9       IN      PTR     arya.stark.lan.
+2       IN      PTR     ned.stark.lan.
