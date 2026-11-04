@@ -65,6 +65,25 @@
             ]
           }
         ]
+      },
+      {
+        "id": 2,
+        "option-data": [
+          {
+            "name": "domain-search",
+            "data": "lannister.lan"
+          },
+          {
+            "name": "routers",
+            "data": "192.168.10.254"
+          }
+        ],
+        "pools": [
+          {
+            "pool": "192.168.11.50 - 192.168.10.90"
+          }
+        ],
+        "subnet": "192.168.11.0/24"
       }
     ]
   }
