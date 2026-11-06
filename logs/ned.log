@@ -1571,3 +1571,32 @@ options:
 2026-11-06 11:56:45.766 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_COMPLETE reclaimed 0 leases in 0.012 ms
 2026-11-06 11:56:45.766 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_NO_MORE_EXPIRED_LEASES all expired leases have been reclaimed
 2026-11-06 11:56:45.766 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_START_TIMER starting timer: reclaim-expired-leases
+2026-11-06 11:56:55.776 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_RUN_TIMER_OPERATION running operation for timer: reclaim-expired-leases
+2026-11-06 11:56:55.776 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_START starting reclamation of expired leases (limit = 100 leases or 250 milliseconds)
+2026-11-06 11:56:55.776 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_MEMFILE_GET_EXPIRED4 obtaining maximum 101 of expired IPv4 leases
+2026-11-06 11:56:55.776 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_COMPLETE reclaimed 0 leases in 0.019 ms
+2026-11-06 11:56:55.776 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_NO_MORE_EXPIRED_LEASES all expired leases have been reclaimed
+2026-11-06 11:56:55.776 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_START_TIMER starting timer: reclaim-expired-leases
+2026-11-06 11:57:05.786 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_RUN_TIMER_OPERATION running operation for timer: reclaim-expired-leases
+2026-11-06 11:57:05.786 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_START starting reclamation of expired leases (limit = 100 leases or 250 milliseconds)
+2026-11-06 11:57:05.786 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_MEMFILE_GET_EXPIRED4 obtaining maximum 101 of expired IPv4 leases
+2026-11-06 11:57:05.787 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_COMPLETE reclaimed 0 leases in 0.023 ms
+2026-11-06 11:57:05.787 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_NO_MORE_EXPIRED_LEASES all expired leases have been reclaimed
+2026-11-06 11:57:05.787 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_START_TIMER starting timer: reclaim-expired-leases
+2026-11-06 11:57:10.792 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_RUN_TIMER_OPERATION running operation for timer: flush-reclaimed-leases
+2026-11-06 11:57:10.792 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_RECLAIMED_LEASES_DELETE begin deletion of reclaimed leases expired more than 3600 seconds ago
+2026-11-06 11:57:10.792 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_MEMFILE_DELETE_EXPIRED_RECLAIMED4 deleting reclaimed IPv4 leases that expired more than 3600 seconds ago
+2026-11-06 11:57:10.792 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_RECLAIMED_LEASES_DELETE_COMPLETE successfully deleted 0 expired-reclaimed leases
+2026-11-06 11:57:10.792 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_START_TIMER starting timer: flush-reclaimed-leases
+2026-11-06 11:57:15.797 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_RUN_TIMER_OPERATION running operation for timer: reclaim-expired-leases
+2026-11-06 11:57:15.797 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_START starting reclamation of expired leases (limit = 100 leases or 250 milliseconds)
+2026-11-06 11:57:15.797 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_MEMFILE_GET_EXPIRED4 obtaining maximum 101 of expired IPv4 leases
+2026-11-06 11:57:15.797 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_COMPLETE reclaimed 0 leases in 0.020 ms
+2026-11-06 11:57:15.797 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_NO_MORE_EXPIRED_LEASES all expired leases have been reclaimed
+2026-11-06 11:57:15.797 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_START_TIMER starting timer: reclaim-expired-leases
+2026-11-06 11:57:25.807 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_RUN_TIMER_OPERATION running operation for timer: reclaim-expired-leases
+2026-11-06 11:57:25.807 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_START starting reclamation of expired leases (limit = 100 leases or 250 milliseconds)
+2026-11-06 11:57:25.807 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_MEMFILE_GET_EXPIRED4 obtaining maximum 101 of expired IPv4 leases
+2026-11-06 11:57:25.807 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_LEASES_RECLAMATION_COMPLETE reclaimed 0 leases in 0.038 ms
+2026-11-06 11:57:25.807 DEBUG [kea-dhcp4.alloc-engine/9.126503626229696] ALLOC_ENGINE_V4_NO_MORE_EXPIRED_LEASES all expired leases have been reclaimed
+2026-11-06 11:57:25.807 DEBUG [kea-dhcp4.dhcpsrv/9.126503626229696] DHCPSRV_TIMERMGR_START_TIMER starting timer: reclaim-expired-leases

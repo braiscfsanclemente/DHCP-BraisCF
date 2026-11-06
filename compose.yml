@@ -43,6 +43,7 @@ services:
         ipv4_address: 192.168.10.2
     volumes:
       - ./ned/kea-dhcp4.conf.json:/etc/kea/kea-dhcp4.conf
+      - ./ned/kea-dhcp-ddns.json:/etc/kea/kea-dhcp-ddns.conf
       - ./logs:/var/log/kea
 
   cliente1:
