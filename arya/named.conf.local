@@ -2,32 +2,43 @@
 // Do any local configuration here
 //
 
+key "chave-stark" {
+	algorithm hmac-sha256;
+	secret "R2s/h76fNQ/tmcaEnTLKL7J9sa66rJeP50wDm7k7vJQ=";
+};
+
 zone "stark.lan" {
 	type primary;
     file "zonas/db.stark.lan";
+    allow-update { key "chave-stark";};
 };
 
 zone "10.168.192.in-addr.arpa" {
     type primary;
     file "zonas/db.10";
+    allow-update { key "chave-stark";};
 };
 
 zone "lannister.lan" {
 	type primary;
     file "zonas/db.lannister.lan";
+    allow-update { key "chave-stark";};
 };
 
 zone "11.168.192.in-addr.arpa" {
     type primary;
     file "zonas/db.11";
+    allow-update { key "chave-stark";};
 };
 
 zone "targaryen.lan" {
 	type primary;
     file "zonas/db.targaryen.lan";
+    allow-update { key "chave-stark";};
 };
 
 zone "12.168.192.in-addr.arpa" {
     type primary;
     file "zonas/db.12";
+    allow-update { key "chave-stark";};
 };

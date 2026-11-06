@@ -1,0 +1,84 @@
+{
+    "DhcpDdns": {
+        "ip-address": "127.0.0.1",
+        "port": 53001,
+        "dns-server-timeout": 500,
+        "ncr-protocol": "UDP",
+        "ncr-format": "JSON",
+        "tsig-keys": [
+            {
+                "name": "chave-stark",
+                "algorithm": "hmac-sha256",
+                "secret": "R2s/h76fNQ/tmcaEnTLKL7J9sa66rJeP50wDm7k7vJQ="
+            }
+        ],
+        "forward-ddns": {
+            "ddns-domains": [
+                {
+                    "name": "stark.lan",
+                    "key-name": "chave-stark",
+                    "dns-servers": [
+                        {
+                            "ip-address": "192.168.10.9",
+                            "port": 53
+                        }
+                    ]
+                },
+                {
+                    "name": "lannister.lan",
+                    "key-name": "chave-stark",
+                    "dns-servers": [
+                        {
+                            "ip-address": "192.168.10.9",
+                            "port": 53
+                        }
+                    ]
+                },
+                {
+                    "name": "targaryen.lan",
+                    "key-name": "chave-stark",
+                    "dns-servers": [
+                        {
+                            "ip-address": "192.168.10.9",
+                            "port": 53
+                        }
+                    ]
+                }
+            ]
+        },
+        "reverse-ddns": {
+            "ddns-domains": [
+                {
+                    "name": "10.168.192.in-addr.arpa",
+                    "key-name": "chave-stark",
+                    "dns-servers": [
+                        {
+                            "ip-address": "192.168.10.9",
+                            "port": 53
+                        }
+                    ]
+                },
+                {
+                    "name": "11.168.192.in-addr.arpa",
+                    "key-name": "chave-stark",
+                    "dns-servers": [
+                        {
+                            "ip-address": "192.168.10.9",
+                            "port": 53
+                        }
+                    ]
+                },
+                {
+                    "name": "12.168.192.in-addr.arpa",
+                    "key-name": "chave-stark",
+                    "dns-servers": [
+                        {
+                            "ip-address": "192.168.10.9",
+                            "port": 53
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

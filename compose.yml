@@ -21,6 +21,10 @@ services:
   arya:
     build: docker/dnsserver
     hostname: arya
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - GATEWAY=192.168.10.254
     networks:
       rede_stark:
         ipv4_address: 192.168.10.9
@@ -30,11 +34,16 @@ services:
   ned:
     build: ./docker/kea
     container_name: ned
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - GATEWAY=192.168.10.254
     networks:
       rede_stark:
         ipv4_address: 192.168.10.2
     volumes:
       - ./ned/kea-dhcp4.conf.json:/etc/kea/kea-dhcp4.conf
+      - ./logs:/var/log/kea
 
   cliente1:
     build: ./docker/cliente
@@ -82,6 +91,19 @@ services:
     networks:
       rede_stark:
         ipv4_address: 192.168.10.224
+
+    command: >
+      sh -c "ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - ned
+  cliente5:
+    build: ./docker/cliente
+    container_name: client5
+    networks:
+      rede_lannister:
+        ipv4_address: 192.168.11.221
 
     command: >
       sh -c "ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"
