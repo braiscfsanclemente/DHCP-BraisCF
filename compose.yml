@@ -49,6 +49,7 @@ services:
   cliente1:
     build: ./docker/cliente
     container_name: client1
+    hostname: cliente1
     networks:
       rede_stark:
         ipv4_address: 192.168.10.221
@@ -63,6 +64,7 @@ services:
   cliente2:
     build: ./docker/cliente
     container_name: client2
+    hostname: cliente2
     networks:
       rede_stark:
         ipv4_address: 192.168.10.222
@@ -76,6 +78,7 @@ services:
   cliente3:
     build: ./docker/cliente
     container_name: client3
+    hostname: cliente3
     networks:
       rede_stark:
         ipv4_address: 192.168.10.223
@@ -89,6 +92,7 @@ services:
   cliente4:
     build: ./docker/cliente
     container_name: client4
+    hostname: cliente4
     networks:
       rede_stark:
         ipv4_address: 192.168.10.224
@@ -102,6 +106,7 @@ services:
   cliente5:
     build: ./docker/cliente
     container_name: client5
+    hostname: cliente5
     networks:
       rede_lannister:
         ipv4_address: 192.168.11.221

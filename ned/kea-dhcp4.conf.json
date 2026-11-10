@@ -1,5 +1,16 @@
 {
   "Dhcp4": {
+    "dhcp-ddns": {
+      "enable-updates": true,
+      "server-ip": "127.0.0.1",
+      "server-port": 53001,
+      "sender-ip": "",
+      "sender-port": 0,
+      "max-queue-size": 1024,
+      "ncr-protocol": "UDP",
+      "ncr-format": "JSON"
+    },
+    "ddns-send-updates": true,
     "interfaces-config": {
       "interfaces": [
         "eth0"
@@ -51,6 +62,7 @@
           }
         ],
         "subnet": "192.168.10.0/24",
+        "ddns-qualifying-suffix": "stark.lan.",
         "reservations": [
           {
             "hw-address": "02:42:ac:11:00:10",
@@ -81,12 +93,13 @@
             "pool": "192.168.11.50 - 192.168.11.90"
           }
         ],
-        "subnet": "192.168.11.0/24"
+        "subnet": "192.168.11.0/24",
+        "ddns-qualifying-suffix": "lannister.lan."
       }
     ],
     "loggers": [
       {
-        "name": "kea-dhcp4",
+        "name": "kea-dhcp4.leases",
         "output-options": [
           {
             "output": "/var/log/kea/ned.log"

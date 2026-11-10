@@ -1,10 +1,13 @@
-$TTL    86400
-@       IN      SOA     arya.stark.lan. admin.stark.lan. (
-                        4           ; Número de serie
-                        3600        ; Actualización (Refresh)
-                        1800        ; Reintento (Retry)
-                        1209600     ; Caducidade (Expire)
-                        86400 )     ; TTL mínimo
-              
-; Servidores de nomes
-@       IN      NS      arya.stark.lan.
+$TTL 86400	; 1 day
+lannister.lan.		IN SOA	arya.stark.lan. admin.stark.lan. (
+				5          ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				1209600    ; expire (2 weeks)
+				86400      ; minimum (1 day)
+				)
+			NS	arya.stark.lan.
+$TTL 1200	; 20 minutes
+cliente5.lannister.lan.	A	192.168.11.50
+			DHCID	( AAABYf49W2+4ylXqrgU9/uRIl3+jWfzbazVwh69Z6kvP
+				jZk= ) ; 0 1 32

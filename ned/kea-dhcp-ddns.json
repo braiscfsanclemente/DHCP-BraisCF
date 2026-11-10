@@ -15,7 +15,7 @@
         "forward-ddns": {
             "ddns-domains": [
                 {
-                    "name": "stark.lan",
+                    "name": "stark.lan.",
                     "key-name": "chave-stark",
                     "dns-servers": [
                         {
@@ -25,7 +25,7 @@
                     ]
                 },
                 {
-                    "name": "lannister.lan",
+                    "name": "lannister.lan.",
                     "key-name": "chave-stark",
                     "dns-servers": [
                         {
@@ -35,7 +35,7 @@
                     ]
                 },
                 {
-                    "name": "targaryen.lan",
+                    "name": "targaryen.lan.",
                     "key-name": "chave-stark",
                     "dns-servers": [
                         {
@@ -49,7 +49,7 @@
         "reverse-ddns": {
             "ddns-domains": [
                 {
-                    "name": "10.168.192.in-addr.arpa",
+                    "name": "10.168.192.in-addr.arpa.",
                     "key-name": "chave-stark",
                     "dns-servers": [
                         {
@@ -59,7 +59,7 @@
                     ]
                 },
                 {
-                    "name": "11.168.192.in-addr.arpa",
+                    "name": "11.168.192.in-addr.arpa.",
                     "key-name": "chave-stark",
                     "dns-servers": [
                         {
@@ -69,7 +69,7 @@
                     ]
                 },
                 {
-                    "name": "12.168.192.in-addr.arpa",
+                    "name": "12.168.192.in-addr.arpa.",
                     "key-name": "chave-stark",
                     "dns-servers": [
                         {
@@ -79,6 +79,17 @@
                     ]
                 }
             ]
-        }
+        },
+        "loggers": [
+            {
+                "name": "kea-dhcp-ddns",
+                "output-options": [
+                    {
+                        "output": "/var/log/kea/ned2.log"
+                    }
+                ],
+                "severity": "INFO"
+            }
+        ]
     }
 }

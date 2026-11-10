@@ -1,0 +1,111 @@
+2026-11-10 11:21:22.236 DEBUG [kea-dhcp-ddns.dhcpddns/10.124170622687168] DHCP_DDNS_CONFIGURE configuration update received: { "dns-server-timeout": 500, "forward-ddns": { "ddns-domains": [ { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "stark.lan." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "lannister.lan." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "targaryen.lan." } ] }, "ip-address": "127.0.0.1", "loggers": [ { "name": "kea-dhcp-ddns", "output-options": [ { "output": "/var/log/kea/ned2.log" } ], "severity": "INFO" } ], "ncr-format": "JSON", "ncr-protocol": "UDP", "port": 53001, "reverse-ddns": { "ddns-domains": [ { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "10.168.192.in-addr.arpa." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "11.168.192.in-addr.arpa." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "12.168.192.in-addr.arpa." } ] }, "tsig-keys": [ { "algorithm": "hmac-sha256", "name": "chave-stark", "secret": "*****" } ] }
+2026-11-10 11:21:22.236 DEBUG [kea-dhcp-ddns.dctl/10.124170622687168] DCTL_CONFIG_START parsing new configuration: { "dns-server-timeout": 500, "forward-ddns": { "ddns-domains": [ { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "stark.lan." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "lannister.lan." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "targaryen.lan." } ] }, "ip-address": "127.0.0.1", "loggers": [ { "name": "kea-dhcp-ddns", "output-options": [ { "output": "/var/log/kea/ned2.log" } ], "severity": "INFO" } ], "ncr-format": "JSON", "ncr-protocol": "UDP", "port": 53001, "reverse-ddns": { "ddns-domains": [ { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "10.168.192.in-addr.arpa." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "11.168.192.in-addr.arpa." }, { "dns-servers": [ { "ip-address": "192.168.10.9", "port": 53 } ], "key-name": "chave-stark", "name": "12.168.192.in-addr.arpa." } ] }, "tsig-keys": [ { "algorithm": "hmac-sha256", "name": "chave-stark", "secret": "*****" } ] }
+2026-11-10 11:21:22.238 INFO  [kea-dhcp-ddns.dctl/10.124170622687168] DCTL_CONFIG_COMPLETE server has completed configuration: listening on 127.0.0.1, port 53001, using UDP
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.dctl/10.124170622687168] DCTL_RUN_PROCESS DhcpDdns starting application event loop
+2026-11-10 11:21:22.239 INFO  [kea-dhcp-ddns.dhcpddns/10.124170622687168] DHCP_DDNS_STARTED Kea DHCP-DDNS server version 2.6.3 started
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command build-report registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command config-get registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command config-hash-get registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command config-reload registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command config-set registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command config-test registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command config-write registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command shutdown registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command status-get registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command version-get registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command statistic-get registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command statistic-get-all registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command statistic-reset registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.commands/10.124170622687168] COMMAND_REGISTERED Command statistic-reset-all registered
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.dhcpddns/10.124170622687168] DHCP_DDNS_QUEUE_MGR_RECONFIGURING application is reconfiguring the queue manager
+2026-11-10 11:21:22.239 DEBUG [kea-dhcp-ddns.dhcpddns/10.124170622687168] DHCP_DDNS_QUEUE_MGR_STARTED application's queue manager has begun listening for requests.
+2026-11-10 11:21:22.375 DEBUG [kea-dhcp-ddns.dhcp-to-d2/10.124170622687168] DHCP_DDNS_QUEUE_MGR_QUEUE_RECEIVE Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B: received and queued a request.
+2026-11-10 11:21:22.376 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_STARTING_TRANSACTION Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B:
+2026-11-10 11:21:22.377 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B: Forward Add to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.377 DEBUG [kea-dhcp-ddns.dhcp-to-d2/10.124170622687168] DHCP_DDNS_QUEUE_MGR_QUEUE_RECEIVE Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99: received and queued a request.
+2026-11-10 11:21:22.377 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_STARTING_TRANSACTION Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99:
+2026-11-10 11:21:22.377 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99: Forward Add to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.385 DEBUG [kea-dhcp-ddns.dhcp-to-d2/10.124170622687168] DHCP_DDNS_QUEUE_MGR_QUEUE_RECEIVE Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005: received and queued a request.
+2026-11-10 11:21:22.385 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_STARTING_TRANSACTION Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005:
+2026-11-10 11:21:22.385 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005: Forward Add to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.387 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.387 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.387 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B: Reverse Replace to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.388 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.388 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.388 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99: Reverse Replace to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.390 DEBUG [kea-dhcp-ddns.dhcp-to-d2/10.124170622687168] DHCP_DDNS_QUEUE_MGR_QUEUE_RECEIVE Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD: received and queued a request.
+2026-11-10 11:21:22.390 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_STARTING_TRANSACTION Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD:
+2026-11-10 11:21:22.390 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD: Forward Add to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.399 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.399 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.399 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005: Reverse Replace to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.403 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.403 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.403 INFO  [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_ADD_SUCCEEDED DHCP_DDNS Request ID 00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B: successfully added the DNS mapping addition for this request: Type: 0 (CHG_ADD)
+Forward Change: yes
+Reverse Change: yes
+FQDN: [cliente4.stark.lan.]
+IP Address: [192.168.10.30]
+DHCID: [00000184DF4973052F087CAF25B3749A0B96BBBDCFF2B29A94FA07D1E531FFDC039B8B]
+Lease Expires On: 20261110114122
+Lease Length: 1200
+Conflict Resolution Mode: check-with-dhcid
+
+2026-11-10 11:21:22.403 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.403 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.403 INFO  [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_ADD_SUCCEEDED DHCP_DDNS Request ID 00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99: successfully added the DNS mapping addition for this request: Type: 0 (CHG_ADD)
+Forward Change: yes
+Reverse Change: yes
+FQDN: [cliente5.lannister.lan.]
+IP Address: [192.168.11.50]
+DHCID: [00000161FE3D5B6FB8CA55EAAE053DFEE448977FA359FCDB6B357087AF59EA4BCF8D99]
+Lease Expires On: 20261110114122
+Lease Length: 1200
+Conflict Resolution Mode: check-with-dhcid
+
+2026-11-10 11:21:22.415 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.415 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.415 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD: Reverse Replace to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.415 DEBUG [kea-dhcp-ddns.dhcp-to-d2/10.124170622687168] DHCP_DDNS_QUEUE_MGR_QUEUE_RECEIVE Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500: received and queued a request.
+2026-11-10 11:21:22.415 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_STARTING_TRANSACTION Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500:
+2026-11-10 11:21:22.415 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500: Forward Add to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.419 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.419 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.419 INFO  [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_ADD_SUCCEEDED DHCP_DDNS Request ID 00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005: successfully added the DNS mapping addition for this request: Type: 0 (CHG_ADD)
+Forward Change: yes
+Reverse Change: yes
+FQDN: [cliente1.stark.lan.]
+IP Address: [192.168.10.32]
+DHCID: [00000143244E81508ED770E6A8422547AB787154B294B3BE910CF7F74E5FDC42F12005]
+Lease Expires On: 20261110114122
+Lease Length: 1200
+Conflict Resolution Mode: check-with-dhcid
+
+2026-11-10 11:21:22.430 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.430 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.430 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_REQUEST_SENT Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500: Reverse Replace to server: 192.168.10.9 port:53
+2026-11-10 11:21:22.434 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.434 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.434 INFO  [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_ADD_SUCCEEDED DHCP_DDNS Request ID 000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD: successfully added the DNS mapping addition for this request: Type: 0 (CHG_ADD)
+Forward Change: yes
+Reverse Change: yes
+FQDN: [cliente3.stark.lan.]
+IP Address: [192.168.10.31]
+DHCID: [000001F877975BD7497DA823E39880C8A69B8C1268047FA2E886A34A31BC42BBF8F0BD]
+Lease Expires On: 20261110114122
+Lease Length: 1200
+Conflict Resolution Mode: check-with-dhcid
+
+2026-11-10 11:21:22.442 DEBUG [kea-dhcp-ddns.asiodns/10.124170622687168] ASIODNS_FETCH_COMPLETED upstream fetch to 192.168.10.9(53) has now completed
+2026-11-10 11:21:22.442 DEBUG [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_UPDATE_RESPONSE_RECEIVED Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500: to server: 192.168.10.9 port:53 status: SUCCESS, rcode: NOERROR
+2026-11-10 11:21:22.442 INFO  [kea-dhcp-ddns.d2-to-dns/10.124170622687168] DHCP_DDNS_ADD_SUCCEEDED DHCP_DDNS Request ID 000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500: successfully added the DNS mapping addition for this request: Type: 0 (CHG_ADD)
+Forward Change: yes
+Reverse Change: yes
+FQDN: [cliente2.stark.lan.]
+IP Address: [192.168.10.101]
+DHCID: [000001E31141AF983577EEFF2BF8EA203B8826458F6417CF04A2530390EF744F894500]
+Lease Expires On: 20261110114122
+Lease Length: 1200
+Conflict Resolution Mode: check-with-dhcid
+
